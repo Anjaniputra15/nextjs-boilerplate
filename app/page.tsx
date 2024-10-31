@@ -7,7 +7,6 @@ import {
   Bot,
   DollarSign,
   LineChart,
-  MessageSquare,
 } from "lucide-react";
 
 export default function LandingPage() {
@@ -282,4 +281,3 @@ function Link({ href, children, ...props }) {
     </a>
   );
 }
-
