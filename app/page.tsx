@@ -154,9 +154,9 @@ export default function LandingPage() {
               <Card>
                 <CardContent className="mt-4">
                   <p className="text-gray-500 dark:text-gray-400">
-                    "Haggle AI has revolutionized our procurement process. We've
-                    seen a 30% reduction in software costs since implementing
-                    it."
+                    Haggle AI has revolutionized our procurement process.
+                    We&apos;ve seen a 30% reduction in software costs since
+                    implementing it.
                   </p>
                   <p className="mt-2 font-semibold">
                     - Jane Doe, CTO at TechCorp
@@ -166,9 +166,9 @@ export default function LandingPage() {
               <Card>
                 <CardContent className="mt-4">
                   <p className="text-gray-500 dark:text-gray-400">
-                    "The insights provided by Haggle AI have been invaluable.
-                    It's like having a team of expert negotiators working for us
-                    24/7."
+                    The insights provided by Haggle AI have been invaluable.
+                    It&apos;s like having a team of expert negotiators working
+                    for us 24/7.
                   </p>
                   <p className="mt-2 font-semibold">
                     - John Smith, Procurement Manager at InnovateCo
@@ -274,7 +274,13 @@ export default function LandingPage() {
   );
 }
 
-function Link({ href, children, ...props }) {
+import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
+
+interface LinkProps extends DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
+  href: string;
+}
+
+function Link({ href, children, ...props }: LinkProps) {
   return (
     <a href={href} {...props}>
       {children}
